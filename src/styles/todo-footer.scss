@@ -1,0 +1,12 @@
+@import 'colours.scss';
+
+.todo-footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: $very-dark-desaturated;
+    padding: 1rem;
+
+    .filter-item span{
+        padding: 0 5px;
+    }
+}

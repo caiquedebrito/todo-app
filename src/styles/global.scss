@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+@import 'colours.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    min-height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: $very-dark-blue url('../images/bg-desktop-dark.jpg') no-repeat fixed;
+    background-size: contain;
+    color: $light-grayish-blue-2;
+}
+
+@media (max-width: 375px) {
+    body {
+        background-image: url('../images/bg-mobile-dark.jpg');
+    }
+}

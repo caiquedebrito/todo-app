@@ -1,0 +1,44 @@
+@import 'colours.scss';
+
+.todo-list {
+    background-color: $very-dark-desaturated;
+    min-height: 450px;
+
+    .todo {
+        padding: .8rem;
+        font-size: 18px;
+        position: relative;
+        padding-left: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        vertical-align: middle;
+        border-bottom: 1px solid hsl(233, 14%, 35%);
+
+        .check-btn{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            top: 50%;
+            left: 25px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 1px solid $dark-grayish-blue-2;
+        }
+    }
+}
+
+.check-task {
+    text-decoration: line-through;
+    color: hsl(233, 14%, 35%);
+    
+    .check-btn{
+        background-image: linear-gradient(90deg, $check-background-1, $check-background-2);
+
+        .img-container {
+            width: 25px;
+            height: 25px;
+            background: url('../images//icon-check.svg') no-repeat center;
+        }
+    }
+}

@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import TodoFooter from './components/TodoFooter';
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
+import Footer from './components/Footer';
+import './styles/app.scss'
+import { createContext, useState} from 'react';
+
+export const TodoContext = createContext()
 
 function App() {
+  const [todos, setTodos] = useState([])
+  const [complited, setComplited] = useState([])
+  const [todoActive, setTodoActive] = useState([])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+
+      <TodoContext.Provider value={{todos, setTodos, complited, setComplited, todoActive, setTodoActive}}>
+        <TodoForm />
+        <TodoList todos={todos} setTodos={setTodos} complited={complited} setComplited={setComplited} todoActive={todoActive} setTodoActive={setTodoActive}/>
+        <TodoFooter />
+      </TodoContext.Provider>
+      
+      <Footer />
     </div>
   );
 }

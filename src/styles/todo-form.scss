@@ -1,0 +1,27 @@
+@import 'colours.scss';
+
+.todo-form {
+    margin: 1rem 0;
+    position: relative;
+
+    .check-btn {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 50%;
+        left: 25px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: 1px solid $dark-grayish-blue-2;
+    }
+
+    input {
+        width: 100%;
+        padding: 1rem;
+        padding-left: 50px;
+        font-size: 18px;
+        color: $light-grayish-blue-2;
+        background-color: $very-dark-desaturated;
+        border: none;
+    }
+}
