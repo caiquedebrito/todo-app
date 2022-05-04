@@ -6,7 +6,69 @@
     background-color: $very-dark-desaturated;
     padding: 1rem;
 
-    .filter-item span{
+    .filter-item a{
         padding: 0 5px;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+            color: #fff;
+        }
     }
+
+    .btn-clicked {
+        color: $bright-blue;
+    }
+
+    .clear-item-complited {
+        cursor: pointer;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+}
+
+.filter-item-mobile {
+    display: none;
+
+    a {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 450px) {
+    .todo-footer {
+
+        > div {
+            padding: .3rem;
+        }
+
+        .filter-item {
+            display: none;
+        }
+    }
+
+    .filter-item-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 1rem;
+        padding: .6rem;
+        background-color: $very-dark-desaturated;
+    }
+}
+
+.light-mode {
+    .todo-footer, .filter-item-mobile {
+        background-color: $very-light-gray;
+        color: hsl(235deg, 24%, 19%);
+    }
+
+    .filter-item-mobile {
+     box-shadow: 5px 5px 83px #0000000f, 5px 5px 83px #0000000f;
+
+    }
+    
 }

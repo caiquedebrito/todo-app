@@ -2,7 +2,8 @@
 
 .todo-list {
     background-color: $very-dark-desaturated;
-    min-height: 450px;
+    height: 330px;
+    overflow-y: scroll;
 
     .todo {
         padding: .8rem;
@@ -21,11 +22,47 @@
             height: 25px;
             top: 50%;
             left: 25px;
+            background-clip: padding-box;
+            
             transform: translate(-50%, -50%);
             border-radius: 50%;
             border: 1px solid $dark-grayish-blue-2;
+            cursor: pointer;
+
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     right: 0;
+            //     bottom: 0;
+            //     background-image: linear-gradient(to right, $bright-blue, $check-background-1, $check-background-2);
+            //     border-radius: 50%;
+            //     z-index: -1;
+            // }
+
+            // &:hover::before {
+            //     margin: -1px;
+            // }
         }
+
+        .check-btn:hover {
+            border-color: $check-background-2;
+        }
+
     }
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+::-moz-scrollbar {
+    display: none;
+}
+
+::-ms-scrollbar {
+    display: none;
 }
 
 .check-task {
@@ -41,4 +78,10 @@
             background: url('../images//icon-check.svg') no-repeat center;
         }
     }
+}
+
+.light-mode .todo-list {
+    background-color: $very-light-gray;
+    color: hsl(235deg, 24%, 19%);;
+    box-shadow: 5px 5px 83px #0000000f, 5px 5px 83px #0000000f;
 }

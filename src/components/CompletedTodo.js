@@ -3,9 +3,9 @@ import { TodoContext } from '../App'
 import '../styles/todo-list.scss'
 import iconCross from '../images/icon-cross.svg'
 
-export default function ActiveTodo() {
-  const {todos, setTodos, completed, setCompleted, todoActive, setTodoActive, setQuantity} = useContext(TodoContext)
-  setQuantity(todoActive.length || 0)
+export default function CompletedTodo() {
+  const {todos, setTodos, completed, setCompleted, todoActive, setTodoActive, quantity, setQuantity} = useContext(TodoContext)
+  setQuantity(completed.length || 0)
 
   function checkTask(id, name) {
     const n = id.toString() // converte em string
@@ -35,8 +35,9 @@ export default function ActiveTodo() {
   }
 
   function removeTask(key, name){
-    todoActive.splice(key, 1)
-    setTodoActive(() => [...todoActive])
+    
+    completed.splice(key, 1)
+    setCompleted(() => [...completed])
 
     const index = todos.indexOf(name)
     todos.splice(index, 1)
@@ -46,8 +47,8 @@ export default function ActiveTodo() {
   return (
     <div className='todo-list'>
       {
-        todoActive.map((todo, key) => 
-        <div className={"todo todo-" + key + '-' + todo[0]} key={key}>
+        completed.map((todo, key) => 
+        <div className={"check-task todo todo-" + key + '-' + todo[0]} key={key}>
           <div className='check-btn'onClick={() => checkTask(key, todo)} >
             <div className='img-container'></div>
           </div>

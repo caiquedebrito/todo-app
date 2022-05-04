@@ -25,3 +25,13 @@
         border: none;
     }
 }
+
+.light-mode .todo-form{
+    input {
+        color: hsl(235deg, 24%, 19%);
+    }
+
+    input, .check-btn {
+        background-color: $very-light-gray;
+    }
+}

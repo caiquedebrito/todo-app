@@ -4,7 +4,19 @@ header {
     justify-content: space-between;
 
     h1 {
-        font-size: 4rem;
+        font-size: 3rem;
+        color: hsl(0deg, 0%, 98%);
+    }
+
+    div.theme-btn {
+        cursor: pointer;
+        height: 26px;
+        width: 26px;
+        background: url('../images/icon-sun.svg') no-repeat center; // icon do tema dark
+    }
+
+    .light-icon-theme {
+        background-image: url('../images/icon-moon.svg') !important;// icon do tema light
     }
 }
 

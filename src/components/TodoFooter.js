@@ -3,39 +3,67 @@ import { TodoContext } from '../App'
 import '../styles/todo-footer.scss'
 
 export default function TodoFooter() {
-  const {todos, setTodos, complited, setComplited, todoActive, setTodoActive} = useContext(TodoContext)
+  const {todos, setTodos, completed, setCompleted, setFilterActvieCompleted, quantity} = useContext(TodoContext)
 
-  function clearComplited() {
-    const todoComplited = []
+  function btnClicked(id) {
+    const btns = document.querySelectorAll('.filter-item a')
+
+    for (let i = 0; i < btns.length; i++) {
+      if (i === id) {
+        btns[i].classList.add('btn-clicked')
+      } else {
+        btns[i].classList.remove('btn-clicked')
+      }
+    }
+  }
+
+  function clearCompleted() {
+    const todoCompleted = []
     todos.forEach(item => {
-      if (complited.includes(item)) {
-        todoComplited.push(item)
+      if (completed.includes(item)) {
+        todoCompleted.push(item)
       }
     })
     
-    const todoNotComplited = todos.filter(item => {
-      if (!todoComplited.includes(item)) {
+    const todoNotCompleted = todos.filter(item => {
+      if (!todoCompleted.includes(item)) {
         return item
       }
     })
     
-    setTodos([...todoNotComplited])
-    setComplited([])
+    setTodos([...todoNotCompleted])
+    setCompleted([])
   }
 
   return (
-    <div className='todo-footer'>
-        <div className='count-item'>
-            {todos.length} items
-        </div>
-        <div className='filter-item'>
-            <span>All</span>
-            <span onClick={() => console.log(todoActive)}>Active</span>
-            <span onClick={()=> console.log(complited)}>Complited</span>
-        </div>
-        <div className='clear-item-complited' onClick={clearComplited}>
-            Clear complited
-        </div>
-    </div>
+    <>
+      <div className='todo-footer'>
+          <div className='count-item'>
+              {quantity} items
+          </div>
+          <div className='filter-item'>
+              <a onClick={() => {
+                setFilterActvieCompleted(0)
+                btnClicked(0)
+              }}>All</a>
+              <a onClick={() => {
+                setFilterActvieCompleted(1)
+                btnClicked(1)
+                }}>Active</a>
+              <a onClick={()=> {
+                setFilterActvieCompleted(2)
+                btnClicked(2)
+                }}>Completed</a>
+          </div>
+          <div className='clear-item-complited' onClick={clearCompleted}>
+              Clear completed
+          </div>
+      </div>
+      <div className='filter-item-mobile'>
+          <a onClick={() => setFilterActvieCompleted(0)}>All</a>
+          <a onClick={() => setFilterActvieCompleted(1)}>Active</a>
+          <a onClick={()=> setFilterActvieCompleted(2)}>Completed</a>
+      </div>
+    </>
   )
 }

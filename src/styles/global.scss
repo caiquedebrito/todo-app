@@ -20,8 +20,19 @@ body {
     color: $light-grayish-blue-2;
 }
 
-@media (max-width: 375px) {
+.light-mode {
+    background: $very-light-gray url('../images//bg-desktop-light.jpg') no-repeat fixed;
+    background-size: contain;
+    
+}
+
+@media (max-width: 500px) {
     body {
         background-image: url('../images/bg-mobile-dark.jpg');
     }
+
+    .light-mode {
+        background-image: url('../images/bg-mobile-light.jpg');
+    }
 }
+
