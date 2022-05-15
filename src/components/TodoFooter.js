@@ -5,8 +5,8 @@ import '../styles/todo-footer.scss'
 export default function TodoFooter() {
   const {todos, setTodos, completed, setCompleted, setFilterActvieCompleted, quantity} = useContext(TodoContext)
 
-  function btnClicked(id) {
-    const btns = document.querySelectorAll('.filter-item a')
+  function btnClicked(id, classN) {
+    const btns = document.querySelectorAll(classN)
 
     for (let i = 0; i < btns.length; i++) {
       if (i === id) {
@@ -42,17 +42,19 @@ export default function TodoFooter() {
               {quantity} items
           </div>
           <div className='filter-item'>
-              <a onClick={() => {
+              <a 
+              className='btn-clicked'
+              onClick={() => {
                 setFilterActvieCompleted(0)
-                btnClicked(0)
+                btnClicked(0, '.filter-item a')
               }}>All</a>
               <a onClick={() => {
                 setFilterActvieCompleted(1)
-                btnClicked(1)
+                btnClicked(1, '.filter-item a')
                 }}>Active</a>
               <a onClick={()=> {
                 setFilterActvieCompleted(2)
-                btnClicked(2)
+                btnClicked(2, '.filter-item a')
                 }}>Completed</a>
           </div>
           <div className='clear-item-complited' onClick={clearCompleted}>
@@ -60,9 +62,20 @@ export default function TodoFooter() {
           </div>
       </div>
       <div className='filter-item-mobile'>
-          <a onClick={() => setFilterActvieCompleted(0)}>All</a>
-          <a onClick={() => setFilterActvieCompleted(1)}>Active</a>
-          <a onClick={()=> setFilterActvieCompleted(2)}>Completed</a>
+          <a 
+            className='btn-clicked'
+          onClick={() => {
+            setFilterActvieCompleted(0)
+            btnClicked(0, '.filter-item-mobile a')
+            }}>All</a>
+          <a onClick={() => {
+            setFilterActvieCompleted(1)
+            btnClicked(1, '.filter-item-mobile a')
+            }}>Active</a>
+          <a onClick={()=> {
+            setFilterActvieCompleted(2)
+            btnClicked(2, '.filter-item-mobile a')
+            }}>Completed</a>
       </div>
     </>
   )

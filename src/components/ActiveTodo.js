@@ -1,11 +1,14 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { TodoContext } from '../App'
 import '../styles/todo-list.scss'
 import iconCross from '../images/icon-cross.svg'
 
 export default function ActiveTodo() {
   const {todos, setTodos, completed, setCompleted, todoActive, setTodoActive, setQuantity} = useContext(TodoContext)
-  setQuantity(todoActive.length || 0)
+
+  useEffect(() => {
+    setQuantity(todoActive.length || 0)
+}, [todos, todoActive, completed])
 
   function checkTask(id, name) {
     const n = id.toString() // converte em string
