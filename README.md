@@ -1,73 +1,84 @@
-# 📝Todo App 
+<h1 align="center">TODO APP</h1>
 
-This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+<div align="center">
 
-## Table of contents
+![MIT badge](https://img.shields.io/github/license/caiquedebrito/todo-app) ![Caique](https://img.shields.io/badge/by-caiquedebrito-red)
+  
+</div>
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-- [Author](#author)
+<hr>
 
-## Overview
+<img src="https://user-images.githubusercontent.com/88737351/168476553-7b17bd50-f274-478c-b36a-22257891979e.gif" alt="Gif do funcionamento do projeto" align="center"/>
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/88737351/168476553-7b17bd50-f274-478c-b36a-22257891979e.gif)
+<p align="center">
+<a href="#descrição">DESCRIÇÃO</a> • <a href="#funcionalidades">FUNCIONALIDADES</a>  • <a href="#tecnologias">TECNOLOGIAS</a> • <a href="#como-usar">COMO USAR</a> • <a href="#licença">LICENÇA</a> • <a href="#autor">AUTOR</a>
+</p>
 
-### The challenge
+## DESCRIÇÃO
 
-Users should be able to:
+Todo app é uma aplicação para gerenciamento de tarefas.
+Essa é uma solução para o [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges ajuda você a melhorar suas coding skills construindo projetos realistas.
+### FUNCIONALIDADES
 
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Add new todos to the list
-- Mark todos as complete
-- Delete todos from the list
-- Filter by all/active/complete todos
-- Clear all completed todos
-- Toggle light and dark mode
+O usuário é capaz de:
 
-### Screenshot
+- Adicionar novas tarefas para a lista
+- Marcar tarefas como completas
+- Deletar tarefas da lista
+- Filtrar por todas/ativas/completadas tarefas
+- limpar todas as tarefas completadas
+- Alternar entre light e dark mode
 
-#### Desktop
-![image](https://user-images.githubusercontent.com/88737351/168474036-57a7fb14-a17a-4052-97e3-b50a980fa1da.png)
+### TECNOLOGIAS
 
-<br>
+As seguintes tecnologias foram utilizadas na construção do projeto:
 
-![image](https://user-images.githubusercontent.com/88737351/168474187-ca2b25a5-e475-40a0-8d24-2ea45ea49d14.png)
+- [React JS](https://reactjs.org/)
+- [SASS](https://sass-lang.com/)
 
-#### Mobile
 
-![image](https://user-images.githubusercontent.com/88737351/168474276-a8e26d3c-696a-4e37-b378-0529c920e936.png)
 
-<br>
+## COMO USAR
 
-![image](https://user-images.githubusercontent.com/88737351/168474289-4b103f2e-0812-4aeb-9d09-0e9238b5ccde.png)
+### PRÉ-REQUISITOS
 
-### Links
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-- Solution URL: [Todo App](https://www.frontendmentor.io/solutions/todo-app-using-react-js-and-sass-B15K7_ALq)
-- Live Site URL: [Todo App](https://caique-todoapp.netlify.app/)
+### RODANDO A APLICAÇÃO LOCALMENTE
 
-## My process
+```bash
+# Clone este repositório
+$ git clone https://github.com/caiquedebrito/todo-app.git
 
-### Built with
+# Acesse a pasta do projeto no terminal/cmd
+$ cd todo-app
 
-- Semantic HTML5 markup
-- CSS custom properties
-- SASS
-- [React](https://reactjs.org/) - JS library
+# Instale as dependências
+$ npm install
 
-### What I learned
+# Execute a aplicação em modo de desenvolvimento
+$ npm start
 
-Building this project I used and learn SASS for the first time.
-And, also, I used and understood better the use of State and Context from React JS.
+# A aplicação inciará na porta:3000 - acesse <http://localhost:3000>
+```
 
-## Author
 
-- Linkedin - [Caique De Brito](https://www.linkedin.com/in/caiquedebrito)
-- Frontend Mentor - [@caiquedebrito](https://www.frontendmentor.io/profile/caiquedebrito)
+### LICENÇA
 
+TODO-APP é licenciado pelo MIT, conforme encontrado no arquivo de [LICENÇA](./LICENSE)
+
+### AUTOR
+---
+
+<a href="https://github.com/caiquedebrito">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/88737351?v=4" width="100px;" alt="Caique De Brito"/>
+</a>
+
+Feito por <b>Caique De Brito</b>🦾
+
+👋🏽 Entre em contato!
+
+[![Linkedin Badge](https://img.shields.io/badge/-caiquedebrito-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/caiquedebrito/)](https://www.linkedin.com/in/caiquedebrito/) 
+[![Gmail Badge](https://img.shields.io/badge/-caiquedebritoo@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:caiquedebritoo@gmail.com)](mailto:caiquedebritoo@gmail.com)
