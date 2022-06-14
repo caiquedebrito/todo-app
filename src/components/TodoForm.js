@@ -4,7 +4,7 @@ import '../styles/todo-form.scss'
 
 export default function TodoForm() {
   const [todo, setTodo] = useState('')
-  const {todos, setTodos, complited, setComplited, todoActive, setTodoActive} = useContext(TodoContext)
+  const { setTodos, setTodoActive} = useContext(TodoContext)
 
   function handleSubmit(e) {
     e.preventDefault()
