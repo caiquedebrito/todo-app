@@ -8,7 +8,9 @@
 
 <hr>
 
-<img src="https://user-images.githubusercontent.com/88737351/168476553-7b17bd50-f274-478c-b36a-22257891979e.gif" alt="Gif do funcionamento do projeto" align="center"/>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/88737351/168476553-7b17bd50-f274-478c-b36a-22257891979e.gif" alt="Gif do funcionamento do projeto"/>
+</div>
 
 <p align="center">
 <a href="#descrição">DESCRIÇÃO</a> • <a href="#funcionalidades">FUNCIONALIDADES</a>  • <a href="#tecnologias">TECNOLOGIAS</a> • <a href="#como-usar">COMO USAR</a> • <a href="#licença">LICENÇA</a> • <a href="#autor">AUTOR</a>
