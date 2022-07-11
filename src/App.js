@@ -10,21 +10,17 @@ export const TodoContext = createContext()
 
 function App() {
   const [todos, setTodos] = useState([])
-  const [completed, setCompleted] = useState([])
-  const [todoActive, setTodoActive] = useState([])
-  const [filterActiveCompleted, setFilterActvieCompleted] = useState(0) // 0 = all; 1 = active; 2 = complited
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(0)
+  const [displayTodoList, setDisplayTodoList] = useState("")
 
   return (
     <div className="app">
       <Header />
-
-      <TodoContext.Provider value={{todos, setTodos, completed, setCompleted, todoActive, setTodoActive, filterActiveCompleted, setFilterActvieCompleted, quantity, setQuantity}}>
+      <TodoContext.Provider value={{todos, setTodos, quantity, setQuantity, displayTodoList, setDisplayTodoList}}>
         <TodoForm />
-        <TodoList todos={todos} setTodos={setTodos} completed={completed} setCompleted={setCompleted} todoActive={todoActive} setTodoActive={setTodoActive}/>
+        <TodoList />
         <TodoFooter />
       </TodoContext.Provider>
-      
       <Footer />
     </div>
   );
