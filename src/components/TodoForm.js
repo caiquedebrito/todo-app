@@ -4,13 +4,18 @@ import '../styles/todo-form.scss'
 
 export default function TodoForm() {
   const [todo, setTodo] = useState('')
-  const { setTodos, setTodoActive} = useContext(TodoContext)
+  const { setTodos } = useContext(TodoContext)
 
   function handleSubmit(e) {
     e.preventDefault()
-    todo && setTodos(prev => [...prev, todo])
-    todo && setTodoActive(prev => [...prev, todo])
-    setTodo('')
+    if (todo) {
+      setTodos(prev => [{
+        id: Date.now(),
+        todo,
+        isCompleted: false
+      }, ...prev])
+      setTodo('')
+    }
   }
 
   function handleChange(e) {

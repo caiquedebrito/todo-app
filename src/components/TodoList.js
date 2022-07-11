@@ -7,13 +7,13 @@ import AllTodos from './AllTodos'
 import CompletedTodo from './CompletedTodo'
 
 export default function TodoList() {
-  const { filterActiveCompleted } = useContext(TodoContext)
+  const { displayTodoList } = useContext(TodoContext)
 
   return (
-    <>
+    <div className="todo-list">
       {
-        filterActiveCompleted === 0 ? <AllTodos /> : filterActiveCompleted === 1 ? <ActiveTodo /> : <CompletedTodo />
+        displayTodoList === "active" ? <ActiveTodo /> : displayTodoList === "completed" ? <CompletedTodo /> : <AllTodos />
       }
-    </>
+    </div>
   )
 }
