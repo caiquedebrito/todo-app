@@ -10,13 +10,13 @@ export const TodoContext = createContext()
 
 function App() {
   const [todos, setTodos] = useState([])
-  const [quantity, setQuantity] = useState(0)
+  const [todoQuantity, setTodoQuantity] = useState(0)
   const [displayTodoList, setDisplayTodoList] = useState("")
 
   return (
     <div className="app">
       <Header />
-      <TodoContext.Provider value={{todos, setTodos, quantity, setQuantity, displayTodoList, setDisplayTodoList}}>
+      <TodoContext.Provider value={{todos, setTodos, todoQuantity, setTodoQuantity, displayTodoList, setDisplayTodoList}}>
         <TodoForm />
         <TodoList />
         <TodoFooter />
