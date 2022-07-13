@@ -24,25 +24,42 @@
             top: 50%;
             left: 25px;
             background-clip: padding-box;
-            
             transform: translate(-50%, -50%);
             border-radius: 50%;
             border: 1px solid $dark-grayish-blue-2;
             cursor: pointer;
+
+            &:hover {
+                border-color: $check-background-2;
+            }
         }
 
-        .check-btn:hover {
-            border-color: $check-background-2;
+        .todo-content > .input-edit {
+            background: inherit;
+            color: inherit;
+            font: inherit;
+            border: none;
+            border-bottom: 1px solid white;
+
+            &:focus {
+                outline: none;
+            }
         }
 
-        img {
-            opacity: 0;
-            transition: opacity 1;
-        }
+        .container-btn {
+            display: flex;
+            gap: .5rem;
 
-        &:hover > img{
-            opacity: 1;
+            div {
+                transition: all .5s ease-in-out;
+                padding: .3rem;
+
+                &:hover {
+                    transform: scale(.8);
+                }
+            }
         }
+        
     }
 }
 
@@ -63,7 +80,7 @@
     color: hsl(233, 14%, 35%);
     
     .check-btn{
-        background-image: linear-gradient(90deg, $check-background-1, $check-background-2);
+        background-image: linear-gradient(90deg, $check-background-1, $check-background-2) !important;
 
         .img-container {
             width: 25px;
@@ -83,6 +100,10 @@
 
         .check-task {
             color: $very-light-grayish-blue !important; 
+        }
+
+        .input-edit {
+            border-bottom: solid 1px black;
         }
     }
 }

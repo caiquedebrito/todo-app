@@ -2,7 +2,8 @@ import React, { useContext } from 'react'
 import { useRef } from 'react';
 import { useState } from 'react';
 import { TodoContext } from '../App';
-import iconCross from "../images/icon-cross.svg";
+import iconDelete from '../images/icon-delete.svg'
+import iconEdit from '../images/icon-edit.svg'
 
 export function SingleTodo({ todo }) {
     const { todos, setTodos } = useContext(TodoContext)
@@ -47,11 +48,19 @@ export function SingleTodo({ todo }) {
         <div className="check-btn" onClick={() => checkTask(todo.id)}>
             <div className="img-container"></div>
         </div>
+        <div className="todo-content">
         {
             edit ? <input type="text" value={editedTodo} onChange={handleEdit} ref={inputRef}/> : <div>{todo.todo}</div>
         }
-        <div onClick={editTodo}>e</div>
-        <img src={iconCross} onClick={() => removeTask(todo.id)}/>
+        </div>
+        <div className="container-btn">
+          <div onClick={editTodo}>
+            <img src={iconEdit} />
+          </div>
+          <div onClick={() => removeTask(todo.id)}>
+            <img src={iconDelete}/>
+          </div>
+        </div>
     </form>
   )
 }
