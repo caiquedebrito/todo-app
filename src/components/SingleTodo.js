@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { TodoContext } from "../App";
+import { TodoContext } from '../context/TodoContext'
 import iconDelete from "../images/icon-delete.svg";
 import iconEdit from "../images/icon-edit.svg";
 

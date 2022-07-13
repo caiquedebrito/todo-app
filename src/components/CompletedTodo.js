@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { TodoContext } from '../App'
+import { TodoContext } from '../context/TodoContext'
 import '../styles/todo-list.scss'
 import { SingleTodo } from './SingleTodo'
 

@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import { TodoContext } from '../App'
+import { TodoContext } from '../context/TodoContext'
 import '../styles/todo-footer.scss'
 
 export default function TodoFooter() {

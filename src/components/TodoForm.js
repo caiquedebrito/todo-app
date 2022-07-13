@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { TodoContext } from '../App'
+import { TodoContext } from '../context/TodoContext'
 import '../styles/todo-form.scss'
 
 export default function TodoForm() {
