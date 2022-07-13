@@ -3,7 +3,7 @@ import { TodoContext } from '../App'
 import '../styles/todo-footer.scss'
 
 export default function TodoFooter() {
-  const {todos, setTodos, quantity, setDisplayTodoList} = useContext(TodoContext)
+  const {todos, setTodos, todoQuantity, setDisplayTodoList} = useContext(TodoContext)
 
   function btnClicked(id, classN) {
     const btns = document.querySelectorAll(classN)
@@ -27,7 +27,7 @@ export default function TodoFooter() {
     <>
       <div className='todo-footer'>
           <div className='count-item'>
-              {quantity} items
+              {todoQuantity} items
           </div>
           <div className='filter-item'>
               <a 
