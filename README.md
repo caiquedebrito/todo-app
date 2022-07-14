@@ -25,6 +25,8 @@ Essa é uma solução para o [Todo app challenge on Frontend Mentor](https://www
 O usuário é capaz de:
 
 - Adicionar novas tarefas para a lista
+- Editar as tarefas
+- Salvar as tarefas
 - Marcar tarefas como completas
 - Deletar tarefas da lista
 - Filtrar por todas/ativas/completadas tarefas
