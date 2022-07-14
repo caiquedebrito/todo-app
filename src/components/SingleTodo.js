@@ -13,10 +13,18 @@ export function SingleTodo({ todo }) {
   const element = useRef();
 
   useEffect(() => {
+    storageTodos()
+  }, [todos])
+
+  useEffect(() => {
     if (edit) {
       element.current.focus();
     }
   }, [edit]);
+
+  function storageTodos() {
+    localStorage.setItem("todos", JSON.stringify(todos))        
+  }
 
   function checkTask(todoID) {
     setEdit(false);
@@ -29,6 +37,9 @@ export function SingleTodo({ todo }) {
 
   function removeTask(todoID) {
     setTodos(todos.filter((todo) => todo.id !== todoID));
+    if (todos.length === 1) {
+      localStorage.removeItem("todos")
+    }
   }
 
   function handleSubmit(event, todoID) {
