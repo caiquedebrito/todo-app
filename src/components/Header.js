@@ -10,10 +10,10 @@ export default function Header() {
       return
     }
     
-    if (isLightModeSetAsDefault()) {
-      setThemeMode("light")
-      return
-    } 
+    // if (isLightModeSetAsDefault()) {
+    //   setThemeMode("light")
+    //   return
+    // } 
   }, [])
 
   useEffect(changeThemeMode, [themeMode])
@@ -22,9 +22,9 @@ export default function Header() {
     return JSON.stringify(localStorage.getItem("theme")) !== "null"
   }
 
-  function isLightModeSetAsDefault() {
-    return window.matchMedia("(prefers-color-scheme: light)").matches
-  }
+  // function isLightModeSetAsDefault() {
+  //   return window.matchMedia("(prefers-color-scheme: light)").matches
+  // }
 
   function changeThemeMode() {
     const themeBtn = document.querySelector('.theme-btn')
